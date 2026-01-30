@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI Checker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <p class="badge">AI Checker</p>
+        <h1>Make Your Text Human With Undetectable AI</h1>
+        <p class="subtitle">
+          Drop in content and get an instant, transparent estimate of how AI-like it
+          appears based on simple readability and repetition signals.
+        </p>
+      </header>
+
+      <section class="checker">
+        <div class="panel">
+          <label for="inputText">Paste text to analyze</label>
+          <textarea
+            id="inputText"
+            placeholder="Paste or type your content here..."
+            rows="10"
+          ></textarea>
+          <div class="actions">
+            <button id="analyzeButton" class="primary">Check text</button>
+            <button id="resetButton" class="ghost">Clear</button>
+          </div>
+        </div>
+
+        <div class="panel results" aria-live="polite">
+          <h2>AI likelihood estimate</h2>
+          <div class="score">
+            <span id="scoreValue">--</span>
+            <span class="score-label">out of 100</span>
+          </div>
+          <p id="scoreSummary" class="summary">
+            Add text to see the analysis.
+          </p>
+          <div class="metrics">
+            <div>
+              <p class="metric-label">Readability</p>
+              <p id="readabilityValue" class="metric-value">--</p>
+            </div>
+            <div>
+              <p class="metric-label">Repetition</p>
+              <p id="repetitionValue" class="metric-value">--</p>
+            </div>
+            <div>
+              <p class="metric-label">Vocabulary variety</p>
+              <p id="vocabValue" class="metric-value">--</p>
+            </div>
+          </div>
+          <p class="disclaimer">
+            This demo uses lightweight heuristics, not a trained detector. Use it as
+            a writing aid, not a verdict.
+          </p>
+        </div>
+      </section>
+
+      <section class="tips">
+        <h2>Tips for more human-sounding writing</h2>
+        <ul>
+          <li>Mix short and long sentences to create a natural rhythm.</li>
+          <li>Use concrete examples, anecdotes, or unique phrasing.</li>
+          <li>Trim repetitive words and vary your sentence openings.</li>
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
